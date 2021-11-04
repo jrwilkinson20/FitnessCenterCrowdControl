@@ -1,12 +1,23 @@
+extends layout
 block content
-  h1= title
-  p Welcome to #{title}   
+  
+  h1 Welcome to the Carl Hansen Fitness Center on Main Campus  
+   p Hours of Operation:
+    h3 Monday - Friday   7am-10pm
+    h3 Saturday/Sunday   9am-7pm
+  - var counter = 0;
+  p There are currently #{counter} out of __ machines avilable 
 
-P Carl Hansen Gym on Main Campus
-  p Hours of Operation:
-  p Monday - Friday   7am-10pm
-  p Saturday/Sunday   9am-7pm
-  p There are currently __ out of __ machines avilable 
+button(onclick='addperson()') Add a person
 
-  button Add a person
-  button Remove a person
+script.
+  var addperson = function() {
+    counter = counter + 1;
+  }
+  
+    return counter;
+  
+
+
+button Add a person
+button Remove a person
