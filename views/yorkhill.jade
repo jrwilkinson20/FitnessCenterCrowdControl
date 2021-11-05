@@ -4,13 +4,21 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}   
-   p Hours of Operation:
+  p Welcome to #{title}
+  p Hours of Operation:
   p Monday - Thursday 7am-9pm
   p Friday            7am-7pm
   p Saturday/Sunday   9am-7pm
   - var counter = 0;
-  p There are currently #{counter} out of __ machines avilable 
+  p There are currently #{counter} out of __ machines avilable
+
+  a(href= "/maincampus")
+    button Carl Hansen Gym on Main Campus
+  a(href= "/")
+      button Home Page 
+
+  h1 News and Announcements:
+    h3 The fitness center will be closed for Friday until 1pm!
 
 button(onclick='addperson()') Add a person
 
@@ -18,17 +26,8 @@ script.
   var addperson = function() {
     counter = counter + 1;
   }
-  
+
     return counter;
-  
+
 
 //button(onclick='something()') Click
-
-
-
-
-  
-
-
-
-
