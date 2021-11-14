@@ -2,16 +2,16 @@ extends layout
 block content
 
   h1 Welcome to the Carl Hansen Fitness Center on Main Campus
-   p Hours of Operation:
-    h3 Monday - Friday   7am-10pm
-    h3 Saturday/Sunday   9am-7pm
-  - var counter = 0;
-  p There are currently #{counter} out of __ machines available
-
-  a(href= "/yorkhill")
+  a(href= "/yorkhill") 
     button Rocky Top Gym on York Hill Campus
   a(href= "/")
         button Home Page
+   h3 Hours of Operation:
+    p Monday - Friday   7am-10pm
+    p Saturday/Sunday   9am-7pm
+  - var counter = 0;
+  p There are currently #{counter} out of __ machines available
+
   h1 News and Announcements:
     h3 The fitness center will be closed for Thanksgiving break!
     h3 Students are required to wear a mask at all times
