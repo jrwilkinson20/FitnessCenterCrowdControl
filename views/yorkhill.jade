@@ -14,18 +14,28 @@ block content
    p Friday            7am-7pm
    p Saturday/Sunday   9am-7pm
   - var counter = 0;
-  p There are currently #{counter} out of __ machines available
+  p There are currently some machines out of #{machines} machines available
 
   h1 News and Announcements:
     h3 The fitness center will be closed for Friday until 1pm!
 
-button(onclick='addperson()') Add a person
+  button(onclick='addperson()') Add a person
 
-script.
-  var addperson = function() {
-  }
+  script.
+    var inUse = 0
+    var ms = #{machines}
+    function addperson(e) {
+      inUse += 1
+      if (inUse < 20) {
+        alert(` machine #${ms - inUse} assigned`)
+      } else {
+        alert('All machines are taken, please try again later.')
+      }
+    }
 
-    return counter;
+   
 
 
-//button(onclick='something()') Click
+
+
+
