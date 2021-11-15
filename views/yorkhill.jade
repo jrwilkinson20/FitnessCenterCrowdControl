@@ -19,15 +19,24 @@ block content
   h1 News and Announcements:
     h3 The fitness center will be closed for Friday until 1pm!
 
-  button(onclick='addperson()') Add a person
+  button(onclick='removeperson()') Remove a person.
+  button(onclick='addperson()') Add a person.
 
   script.
     var inUse = 0
     var ms = #{machines}
-    function addperson(e) {
+    function removeperson(e) {
       inUse += 1
       if (inUse < 20) {
         alert(` machine #${ms - inUse} assigned`)
+      } else {
+        alert('All machines are taken, please try again later.')
+      }
+    }
+    function addperson(e) {
+      inUse += 1
+      if (inUse < 20) {
+        alert(` machine #${ms + inUse} assigned`)
       } else {
         alert('All machines are taken, please try again later.')
       }
