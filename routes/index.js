@@ -19,7 +19,7 @@ router.get('/maincampus', function (req, res, next) {
   res.render('maincampus', { title: 'Fitness Center Crowd at Mount Carmel' });
 });
 router.get('/yorkhill', function (req, res, next) {
-  res.render('yorkhill', { title: 'Fitness Center Crowd at York Hill', machines: 20 });
+  res.render('yorkhill', { title: 'Welcome to the Rocky Top Fitness Center on York Hill', machines: 20 });
 
 
 
