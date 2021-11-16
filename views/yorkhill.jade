@@ -4,19 +4,20 @@ extends layout
 
 block content
   h1= title
-  a(href= "/maincampus")
-    button Carl Hansen Gym on Main Campus
-  a(href= "/")
-      button Home Page
+  div.container
+            ul.col-md-12.row
+                a(href="/")
+                    li.col-md-3.col-md-offset-1 Home Page
+                a(href="/maincampus")
+                    li.col-md-3 Main Campus 
   h3 Hours of Operation:
    p Monday - Thursday 7am-9pm
    p Friday            7am-7pm
    p Saturday/Sunday   9am-7pm
   - var counter = 0;
-  p There are currently 0 machines out of #{machines} machines available
+  p Select an option below to view the amount of machines in use.
 
-  h1 News and Announcements:
-    h3 The fitness center will be closed for Thanksgiving break!
+  
 
   button(onclick='removeperson()') Remove a person.
   button(onclick='addperson()') Add a person.
@@ -25,7 +26,7 @@ block content
     var inUse = 0
     var ms = #{machines}
     function removeperson(e) {
-      inUse += 1
+      inUse -= 1
       if (inUse < 20) {
         alert(` machine #${ms - inUse} assigned`)
       } else {
@@ -41,7 +42,8 @@ block content
       }
     }
 
-   
+  h1 News and Announcements:
+    h3 The fitness center will be closed for Thanksgiving break!
 
 
 

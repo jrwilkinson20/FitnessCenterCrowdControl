@@ -2,15 +2,20 @@ extends layout
 block content
 
   h1 Welcome to the Carl Hansen Fitness Center on Main Campus
-  a(href= "/yorkhill") 
-    button Rocky Top Gym on York Hill Campus
-  a(href= "/")
-        button Home Page
+
+  div.container
+            ul.col-md-12.row
+                a(href="/")
+                    li.col-md-3.col-md-offset-1 Home Page
+                a(href="/yorkhill")
+                    li.col-md-3 York Hill 
+
+  
    h3 Hours of Operation:
     p Monday - Friday   7am-10pm
     p Saturday/Sunday   9am-7pm
   - var counter = 0;
-  p There are currently 0 machines out of #{machines} machines available
+  p Select an option below to view the amount of machines in use.
 
   button(onclick='removeperson()') Remove a person.
   button(onclick='addperson()') Add a person.
@@ -19,7 +24,7 @@ block content
     var inUse = 0
     var ms = #{machines}
     function removeperson(e) {
-      inUse += 1
+      inUse -= 1
       if (inUse < 20) {
         alert(` machine #${ms - inUse} assigned`)
       } else {
