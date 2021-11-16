@@ -3,14 +3,17 @@ extends layout
 block content 
   
 
-  h2= title
+  h2=title
   h1 Welcome, Select a Gym to start! 
-    h3  This application will show you the amount of machines in use in each gym. To view the gym you would like to check select an option below. 
+    h3 This application will show you the amount of machines in use in each gym. To view the gym you would like to check select an option below. 
   p __________________________________________________________
-  a(href= "/maincampus")
-    button Carl Hansen Gym on Main Campus
+  
+  .div.row
+    a(href='/maincampus')
+        img(src='images/qu.jpg')
+    a(href= "/yorkhill")
+      img(src='images/rockytop.jpg')    
   p __________________________________________________________
-  a(href= "/yorkhill")
-    button Rocky Top Gym on York Hill Campus
+ 
  
 
