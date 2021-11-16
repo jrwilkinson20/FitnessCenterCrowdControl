@@ -10,12 +10,9 @@ block content
     p Monday - Friday   7am-10pm
     p Saturday/Sunday   9am-7pm
   - var counter = 0;
-  p There are currently #{counter} out of #{machines} machines available
+  p There are currently 0 machines out of #{machines} machines available
 
-  h1 News and Announcements:
-    h3 The fitness center will be closed for Thanksgiving break!
-    h3 Students are required to wear a mask at all times
-button(onclick='removeperson()') Remove a person.
+  button(onclick='removeperson()') Remove a person.
   button(onclick='addperson()') Add a person.
 
   script.
@@ -37,3 +34,9 @@ button(onclick='removeperson()') Remove a person.
         alert('All machines are taken, please try again later.')
       }
     }
+  h1 News and Announcements:
+    h3 The fitness center will be closed for Thanksgiving break!
+    h3 Students are required to wear a mask at all times
+
+  
+
