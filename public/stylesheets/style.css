@@ -48,10 +48,6 @@ h1 {
   letter-spacing: 0.03em;
   color: blue;
   
-  
-  
-  
-  
 }
 
 h2 {
@@ -64,8 +60,6 @@ h2 {
   
 }
 
-
-
 img {
   border-radius: 50%;
   width: auto;
@@ -73,3 +67,20 @@ img {
   margin-right: 10px;
 }
 
+.bkimg1 {
+  background-image: url(/images/maincampusequip.png),url(/images/qu.jpg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left, right;
+  background-size: 450px;
+
+}
+
+.bkimg2 {
+  background-image: url(/images/yorkhillequip.png),url(/images/rockytop.jpg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left, right;
+  background-size: 500px, 450px;
+
+}
